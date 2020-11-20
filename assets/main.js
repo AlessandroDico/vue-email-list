@@ -8,7 +8,7 @@ var app = new Vue ({
         allEmail: [],
     },
     methods:{
-        funzione(){
+        createMail(){
             let self = this;
             for (var i = 0; i < 10; i++) {
             axios.get('https://flynn.boolean.careers/exercises/api/random/mail')
@@ -43,7 +43,7 @@ var app = new Vue ({
         console.log(self.allEmail);
 
 // CREO UNA FUNZIONE IN METHODS CHE FA PER 10 VOLTE L'AZIONE DI CHIAMARE IL SERVER E POI RICHIAMO IN MOUNTED LA FUNZIONE
-        this.funzione();
+        this.createMail();
 
 
 
