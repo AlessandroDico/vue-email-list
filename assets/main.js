@@ -2,6 +2,7 @@
 var app = new Vue ({
     el: '#root',
     data:{
+        //inizializiamo la mail a false perchè essendo di tipo diverso rispetto alla mail (la mail è una stringa e false è un booleano) possiamo poi nell HTML visualizzare la nostra mail con la condizione del v-if !== in modo da essere più 'selettivi' sul controllo (gli aggiungerò anche isNaN e forse altro)
         email: false,
     },
     methods:{
