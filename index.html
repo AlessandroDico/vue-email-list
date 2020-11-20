@@ -11,8 +11,12 @@
     <body>
 
         <div id="root">
-            <div class="email-container" v-if="email !== false && isNaN(email)">
-                <p>{{ email }}</p>
+            <div class="email-container">
+                <ul v-for="email in allEmail">
+                    <li>
+                        <p>{{email}}</p>
+                    </li>
+                </ul>
             </div>
         </div>
 
