@@ -7,3 +7,30 @@
 ul {
     list-style-type: none;
 }
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: cadetblue;
+    height: 100vh;
+}
+
+#root{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.email-container {
+    width: 1000px;
+}
+
+.email-container > h1 {
+    color: #9e4b0c;
+}
+
+.email-container ul > li > p {
+    margin: 10px;
+    font-size: 25px;
+    color: #005600;
+}
