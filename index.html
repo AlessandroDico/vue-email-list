@@ -8,14 +8,26 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js" integrity="sha512-DZqqY3PiOvTP9HkjIWgjO6ouCbq+dxqWoJZ/Q+zPYNHmlnI2dQnbJ5bxAHpAMw+LXRm4D72EIRXzvcHQtE8/VQ==" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-        <!-- https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js -->
     </head>
     <body>
 
         <div id="root">
-            <div class="email-container" v-if="allEmail.length > 0">
+<!-- PRIMA SOLUZIONE -->
+<!-- le mail saranno visibili solo quando l'array è pieno -->
+            <div class="email-container" v-if="allEmail.length > 9">
                 <h1>Prova ad hackerare uno dei seguenti contatti</h1>
                 <ul v-for="(email,item) in allEmail">
+                    <li>
+                        <p>{{ item + 1}}. {{email}}</p>
+                    </li>
+                </ul>
+            </div>
+
+<!-- SECONDA SOLUZIONE -->
+<!-- le mail saranno visibili man mano che l'array si riempe -->
+            <div class="email-container-second" v-if="allEmailSecond.length > 0">
+                <h1>Prova ad hackerare di nuovo</h1>
+                <ul v-for="(email,item) in allEmailSecond">
                     <li>
                         <p>{{ item + 1}}. {{email}}</p>
                     </li>
